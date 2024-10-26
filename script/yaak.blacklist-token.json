@@ -1,0 +1,223 @@
+{
+  "yaakVersion": "2024.11.4",
+  "yaakSchema": 2,
+  "timestamp": "2024-10-26T01:03:23.751420695",
+  "resources": {
+    "workspaces": [
+      {
+        "model": "workspace",
+        "id": "wk_utGMCgARjq",
+        "createdAt": "2024-10-25T21:57:46",
+        "updatedAt": "2024-10-25T21:57:46",
+        "name": "Blacklist-Token",
+        "description": "",
+        "variables": [],
+        "settingValidateCertificates": true,
+        "settingFollowRedirects": true,
+        "settingRequestTimeout": 0
+      }
+    ],
+    "environments": [],
+    "folders": [
+      {
+        "model": "folder",
+        "id": "fl_7ONBQ1udmK",
+        "createdAt": "2024-10-25T23:09:57",
+        "updatedAt": "2024-10-25T23:09:57",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": null,
+        "name": "[DELETE] Admin",
+        "sortPriority": -1729897800000.0
+      },
+      {
+        "model": "folder",
+        "id": "fl_Tznam6B2zQ",
+        "createdAt": "2024-10-25T22:05:35",
+        "updatedAt": "2024-10-25T22:05:35",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": null,
+        "name": "[GET] Admin",
+        "sortPriority": -1729893900000.0
+      },
+      {
+        "model": "folder",
+        "id": "fl_NidESoZE75",
+        "createdAt": "2024-10-25T22:02:40",
+        "updatedAt": "2024-10-25T22:06:36",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": null,
+        "name": "[GET] User",
+        "sortPriority": -864946800000.0
+      },
+      {
+        "model": "folder",
+        "id": "fl_3U8WznJXq4",
+        "createdAt": "2024-10-25T22:00:11",
+        "updatedAt": "2024-10-25T22:06:11",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": null,
+        "name": "[POST] User",
+        "sortPriority": -1729893600000.0
+      }
+    ],
+    "httpRequests": [
+      {
+        "model": "http_request",
+        "id": "rq_nuDx09KU3R",
+        "createdAt": "2024-10-25T22:11:19",
+        "updatedAt": "2024-10-25T23:10:12",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_7ONBQ1udmK",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "headers": [],
+        "method": "DELETE",
+        "name": "1. Remove a token from the blacklist",
+        "sortPriority": 0.0,
+        "url": "http://localhost:8080/api/admin/blacklist/token/YOUR_TOKEN",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_bRtthfkV8V",
+        "createdAt": "2024-10-25T22:10:30",
+        "updatedAt": "2024-10-25T23:10:42",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_Tznam6B2zQ",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "headers": [],
+        "method": "GET",
+        "name": "3. Get information about a specific token",
+        "sortPriority": 2000.0,
+        "url": "http://localhost:8080/api/admin/blacklist/token/YOUR_TOKEN",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_dDeCm5PeW0",
+        "createdAt": "2024-10-25T22:09:05",
+        "updatedAt": "2024-10-25T23:10:42",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_Tznam6B2zQ",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "headers": [],
+        "method": "GET",
+        "name": "2. Get detailed information about all blacklisted tokens",
+        "sortPriority": 1000.0,
+        "url": "http://localhost:8080/api/admin/blacklist/tokens/details",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_TJAViyqoqg",
+        "createdAt": "2024-10-25T22:07:27",
+        "updatedAt": "2024-10-25T23:10:42",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_Tznam6B2zQ",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "headers": [],
+        "method": "GET",
+        "name": "1. Get all blacklisted tokens",
+        "sortPriority": 0.0,
+        "url": "http://localhost:8080/api/admin/blacklist/tokens",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_iGJodsA2UU",
+        "createdAt": "2024-10-25T22:03:39",
+        "updatedAt": "2024-10-26T00:37:03",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_NidESoZE75",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Bearer YOUR_TOKEN"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          }
+        ],
+        "method": "GET",
+        "name": "3. Token Validation Request",
+        "sortPriority": 0.0,
+        "url": "http://localhost:8080/api/auth/validate",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_1PaHGdxd10",
+        "createdAt": "2024-10-25T22:01:07",
+        "updatedAt": "2024-10-26T00:37:17",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_3U8WznJXq4",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Bearer YOUR_TOKEN"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          }
+        ],
+        "method": "POST",
+        "name": "2. Logout Request",
+        "sortPriority": -1729893600000.0,
+        "url": "http://localhost:8080/api/auth/logout",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_hfwm1TcDPa",
+        "createdAt": "2024-10-25T22:00:22",
+        "updatedAt": "2024-10-25T22:00:53",
+        "workspaceId": "wk_utGMCgARjq",
+        "folderId": "fl_3U8WznJXq4",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n  \"username\": \"user\",\n  \"password\": \"password\"\n}"
+        },
+        "bodyType": "application/json",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "name": "1. Login Request",
+        "sortPriority": -1729893600000.0,
+        "url": "http://localhost:8080/api/auth/login",
+        "urlParameters": []
+      }
+    ],
+    "grpcRequests": []
+  }
+}
